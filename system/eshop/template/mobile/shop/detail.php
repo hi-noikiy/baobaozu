@@ -87,7 +87,7 @@ div.flicking_con a.on{background-position:0 -9px}
                     .comment .content { overflow:hidden;color:#555;font-size:13px;padding-left:5px;}
                     .comment .time { padding:5px; color:#666;font-size:13px;padding-left:5px;}
                     .comment .imgs { overflow:hidden;padding-top:5px;padding-left:5px;}
-                    .comment .imgs img { padding:1px;border:1px solid #ccc;float:left;margin-right:5px;}
+                    .comment .imgs img { padding:1px;border:1px solid #ccc;float:left;margin-right:5px; margin-bottom:5px; display:block; width:30%; height:86px; overflow:hidden}/*-lank-*/
                    #comment_loading { width:94%;padding:10px;color:#666;text-align: center;} 
         #recommand_container  {height:auto; width:100%; background:#fff; overflow:hidden;float:left;} 
     #recommand_container .good {height:auto; width:46%; padding:0px 2% 10px; float:left;}
@@ -389,14 +389,14 @@ div.flicking_con a.on{background-position:0 -9px}
                     <div class='content'><%comment.content%></div>
                     <%if comment.images.length>0%>
                        <div class='imgs'>
-                          <%each comment.images as img%><img src='<%img%>' style='width:30px;height:30px;' /><%/each%>
+                          <%each comment.images as img%><img src='<%img%>'  /><%/each%>
                     </div>
                     <%/if%>
                    <%if comment.reply_content %>
                          <div class='content' style='margin-top:5px;'><span style='color:#ff6600'>[回复]</span><%comment.reply_content%></div>
                         <%if comment.reply_images.length>0%>
                             <div class='imgs'>
-                               <%each comment.reply_images as img%><img src='<%img%>' style='width:30px;height:30px;' /><%/each%>
+                               <%each comment.reply_images as img%><img src='<%img%>'  /><%/each%>
                          </div>
                    <%/if%>
                       <%/if%>
@@ -405,7 +405,7 @@ div.flicking_con a.on{background-position:0 -9px}
                          <div class='content' style='margin-top:5px;'><span style='color:#ff6600'>[追加]</span><%comment.append_content%></div>
                         <%if comment.append_images.length>0%>
                             <div class='imgs'>
-                               <%each comment.append_images as img%><img src='<%img%>' style='width:30px;height:30px;' /><%/each%>
+                               <%each comment.append_images as img%><img src='<%img%>'  /><%/each%>
                          </div>
                       <%/if%>
                      <%/if%>
@@ -414,7 +414,7 @@ div.flicking_con a.on{background-position:0 -9px}
                          <div class='content' style='margin-top:5px;'><span style='color:#ff6600'>[回复]</span><%comment.append_reply_content%></div>
                         <%if comment.append_reply_images.length>0%>
                             <div class='imgs'>
-                               <%each comment.append_reply_images as img%><img src='<%img%>' style='width:30px;height:30px;' /><%/each%>
+                               <%each comment.append_reply_images as img%><img src='<%img%>'  /><%/each%>
                          </div>
                       <%/if%>
                      <%/if%>

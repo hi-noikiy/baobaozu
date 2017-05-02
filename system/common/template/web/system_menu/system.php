@@ -24,7 +24,6 @@
                        <li 	<?php  if($_GPC['act'] == 'manager'&&$_GPC['do'] == 'dev'  ) { ?>class="current"<?php  } ?>>
                     <a href="<?php  echo create_url('site', array('act' => 'manager','do' => 'dev'))?>">系统信息</a>
                                     </li>
-                     
                       <li 	<?php  if($_GPC['act'] == 'manager'&&$_GPC['do'] == 'online_update'  ) { ?>class="current"<?php  } ?>>
                       	<?php 	$t_core_version=http_get("http://update.baijiacms.com/baijiacmsv4/update/core_version.html");
                       	$t_net_core_version=intval($t_core_version);
@@ -36,7 +35,7 @@
                       ?>
                     <a href="<?php  echo create_url('site', array('act' => 'manager','do' => 'online_update'))?>">在线更新<?php if($t_local_core_version<$t_net_core_version){ ?><img src="<?php  echo RESOURCE_ROOT;?>public/image/new.gif" style="display:inline;"/><?php  } ?></a>
                                     </li> 
-                    
+                                    
                                               <li 	<?php  if($_GPC['act'] == 'manager'&&$_GPC['do'] == 'license'  ) { ?>class="current"<?php  } ?>>
                     <a href="<?php  echo create_url('site', array('act' => 'manager','do' => 'license'))?>">授权许可</a>
                                     </li> 
